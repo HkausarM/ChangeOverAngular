@@ -1,0 +1,77 @@
+
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .custom-toolbar {
+    background-color: rgb(82, 153, 194);
+    color: white; /* Ensures the text color is readable against the blue background */
+  }
+  
+  .change-over {
+    margin-right: auto;
+    font-weight: bold;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .example-card {
+    width: 300px;
+  }
+  
+  .sidenav-container {
+    height: 100%;
+  }
+  
+  .custom-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .product-card {
+    flex: 1 1 calc(25% - 16px);
+    box-sizing:content-box;
+  }
+  
+  .product-card img {
+    max-height: 150px;
+    object-fit:contain;
+  }
+  
+  @media (max-width: 960px) {
+    .product-card {
+      flex: 1 1 calc(50% - 16px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .product-card {
+      flex: 1 1 100%;
+    }
+  }
+  
+  

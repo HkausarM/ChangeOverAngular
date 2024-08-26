@@ -1,0 +1,23 @@
+<div class="content">
+      <div fxLayout="row" fxLayoutWrap fxLayoutGap="16px" class="product-list">
+        <mat-card *ngFor="let product of products" class="product-card" fxFlex="1 1 calc(25% - 16px)">
+          <img width="300" 
+          height="200" 
+          loading="lazy" 
+          sizes="(max-width: 600px) 480px, 800px" mat-card-image *ngIf="product.ProductImg" [src]="'http://localhost:1337' + product.ProductImg" alt="Product image">
+          <mat-card-content>
+            <h5>{{ product.ProductName }}</h5>
+            <p>{{ product.Description }}</p>
+            <p><strong>Price: </strong>{{ product.Price }}$</p>
+            <mat-chip color="accent" selected>
+              Discount: {{ product.Discount }}%
+            </mat-chip>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary">Add to Cart</button>
+            <button mat-button color="warn" (click)="deleteProduct(product.id)">Delete Product</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+ 

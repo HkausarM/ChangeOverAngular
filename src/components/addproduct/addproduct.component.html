@@ -1,0 +1,72 @@
+<div class="container">
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="productName">Product Name:</label>
+        <input id="productName" formControlName="ProductName" />
+        <div *ngIf="productForm.get('ProductName')?.invalid && productForm.get('ProductName')?.touched">
+          Product Name is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="productDescription">Product Description:</label>
+        <textarea id="productDescription" formControlName="Description"></textarea>
+        <div *ngIf="productForm.get('Description')?.invalid && productForm.get('Description')?.touched">
+          Product Description is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="productSize">Product Size:</label>
+        <select id="productSize" formControlName="Size">
+          <option value="" disabled selected>Select Size</option>
+          <option *ngFor="let size of sizes" [value]="size">{{ size }}</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="productCategory">Product Category:</label>
+        <select id="productCategory" formControlName="Category">
+          <option value="" disabled selected>Select Category</option>
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="price">Price:</label>
+        <input id="price" formControlName="Price" type="number" />
+        <div *ngIf="productForm.get('Price')?.invalid && productForm.get('Price')?.touched">
+          Valid price is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="discount">Discount:</label>
+        <input id="discount" formControlName="Discount" type="number" />
+        <div *ngIf="productForm.get('Discount')?.invalid && productForm.get('Discount')?.touched">
+          Discount should be between 0 and 100.
+        </div>
+      </div>
+  
+      <div>
+        <label for="image">Product Image:</label>
+        <input type="file" (change)="onFileSelected($event)" />
+        <div *ngIf="selectedImage">
+          <img [src]="selectedImage" alt="Product Image Preview" class="image-preview"  width="300" 
+          height="200" 
+          loading="lazy" 
+          srcset="medium-image.jpg 768w, large-image.jpg 1200w" 
+          sizes="(max-width: 600px) 480px, 800px"/>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="productForm.invalid">Submit</button>
+    </form>
+  
+    <!-- Success Dialog -->
+    <!-- <div *ngIf="successMessage" class="success-dialog">
+      <p>{{ successMessage }}</p>
+      <button (click)="closeDialog()">Close</button>
+    </div> -->
+  </div>
+  

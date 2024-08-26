@@ -1,0 +1,50 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .image-preview {
+    margin-top: 10px;
+    max-width: 100%;
+    max-height: 200px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .success-dialog {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+  }
+  
+  .success-dialog button {
+    margin-top: 10px;
+    background-color: #fff;
+    color: #4CAF50;
+  }
+  

@@ -1,0 +1,48 @@
+  /* sidenav styles */
+  .sidenav {
+    width: 250px; /* Set a width for the sidenav */
+    background-color: #263238; /* Dark color for the sidenav background */
+    color: white; /* Text color inside the sidenav */
+  }
+  
+  /* sidenav list item styles */
+  .mat-nav-list {
+    padding: 0; /* Remove padding from the nav list */
+  }
+  
+  .mat-list-item {
+    color: white; /* Default color for list items */
+  }
+  
+  /* Highlight list item on hover */
+  .mat-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighten on hover */
+  }
+  
+  /* sidenav content styles */
+  .mat-sidenav-content {
+    padding: 20px; /* Add padding to the content area */
+  }
+  
+  /* toolbar styles */
+  .custom-toolbar {
+    background-color: #1e1e1e; /* Toolbar background color */
+    color: white; /* Text color in the toolbar */
+  }
+  
+  /* Button styles */
+  .mat-button, .mat-icon-button {
+    color: white; /* Button text color */
+  }
+  
+  /* Spacing for the change-over text */
+  .change-over {
+    margin-left: 20px; /* Space between buttons and the change-over text */
+    font-size: 1.5rem; /* Increase font size */
+  }
+  
+  /* Spacer for layout alignment */
+  .spacer {
+    flex: 1 1 auto; /* Flexbox property to push buttons to the right */
+  }
+  
